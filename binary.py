@@ -48,6 +48,7 @@ class Tree(object):
         self.root = None
         self.size = len(array)
         self.res = []
+        
     def insert(self, node, someNumber):
         if node is None:
             node = TreeNode(someNumber)
@@ -64,14 +65,14 @@ class Tree(object):
     def pre_order(self):
         current = self.root
         #res = []
-        while (current != None):
+        if (current != None):
             res.append(current.val)
             pre_order(current.left)
             pre_order(current.right)
 
     def mid_order(self):
         current  = self.root
-        while (current != None):
+        if (current != None):
             mid_order(current.left)
             res.append(current.val)
             mid_order(current.right)
@@ -105,8 +106,7 @@ if __name__ == '__main__':
     arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     
     tree = Tree(arr)
+    pdb.set_trace()
     tree.print_tree()
-
-    
-
+     
     #    print TreeNode.binary_search(root, 4)
