@@ -29,8 +29,8 @@ def booking_test2(self):
     for line in sorted(result):
         print line
         
-
-#return list
+# not written by me
+# not return list
 def permutations(string, step = 0):
 
 #    if string == "":
@@ -55,18 +55,21 @@ def permutations(string, step = 0):
 
 
 
-
+#my version
 def permutations2(mystr):
     if len(mystr) <= 1:
         return [mystr]
+
     res = []
-    for elt in mystr:
-        permutations = permutations2(mystr.replace(elt, ""))
+    for ele in mystr:
+        permutations = permutations2(mystr.replace(ele, ""))
         for permutation in permutations:
-            res.append(elt + permutation)
+            res.append(ele + permutation)
+        
     return res
 
         
 if __name__ == '__main__':
-    l = permutations2('a')
+    l = permutations2('abc')
     print l
+#    permutations("")

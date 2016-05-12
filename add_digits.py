@@ -5,7 +5,7 @@ import pdb
 
 def add_digits(num):
 
-    if len(str(num)) == 1:
+    if len(str(Num)) == 1:
            return num
 
     else:           
