@@ -1,0 +1,5 @@
+import pdb
+
+class Solution(object):
+    def find(self, array, start, end, k):
+        

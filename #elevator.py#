@@ -1,0 +1,57 @@
+#sigle direction first
+class Elevator(threading.Thread):
+    def __init__ (self, n_floor):
+        threading.Thread.__init__(self);
+        
+        self.n_floor = n_floor
+        self.state = "STOP" # UP, DOWN, STOP
+        self.floor_array = [None * n_floor]
+        return
+
+    
+
+    
+    def moveUp(floor):
+        self.state = "UP"
+        wait(10)
+        
+        self.floor_array[floor] = 0
+        self.state = "STOP"
+
+        return
+        
+    def moveDown(floor):
+        
+        return
+
+    def stop():
+        return 
+    
+    def elevator_run():
+        return
+    
+    def show_floor():
+
+        return
+
+    def run():
+        return
+    
+
+class People(object):
+    def __init__ (self):
+        enter_number
+
+
+
+if __name__ == "__main__":
+    N = 10
+    NPEOPLE = 30
+
+
+    while (True):
+        ele = Elevator(N)
+        ele.run()
+
+        
+    for ()

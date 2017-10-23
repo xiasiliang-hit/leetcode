@@ -1,0 +1,29 @@
+class Node(object):
+    data = 0
+    child = []
+
+class Tree():
+    root
+
+
+
+def width(tree):
+    queue = []
+    queue_next = []
+
+    queue.append(root)
+
+    while len(quueu) != 0
+      while len(queue) != 0:
+        nodes = queue.pop()
+
+        for ele in nodes:
+            queueu_next.append(ele)
+
+            if len(queue_next) > max_i:
+                max_i = queue_next
+      queue = queue_next
+
+    
+    if queue != None:
+                

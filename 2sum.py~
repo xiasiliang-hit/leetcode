@@ -1,0 +1,9 @@
+import pdb
+
+class Solution(sefl):
+    def __init__ (self):
+        return
+    def 2sum(self, array, target):
+        for e in array:
+            
+

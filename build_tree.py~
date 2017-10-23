@@ -1,0 +1,27 @@
+def build():
+    line = raw_input()
+    pairs = line.split(' ')
+    
+    if check(pairs) != True:
+        return check(pairs)
+    else:
+        return "aaa"
+    
+
+
+def check(array):
+    #
+    i = 0
+    j = 0
+    while i <  len(array):
+        j = i + 1
+        while j < len(array):
+            if array[i] == array[j]:
+                return 'E2'
+
+
+if __name__ == "__main__":
+
+    s = '(a,b)  (c, d) (w,y)'
+    a = s.split(' ')
+    print a

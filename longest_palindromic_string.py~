@@ -1,0 +1,63 @@
+#5. Longest Palindromic Substring
+# time exceeds, O(N2)
+
+# there is Manacher Aglo O(N) 
+
+import os
+import pdb
+
+class Solution(object):
+    def longestPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        max = 1
+        result_string = ""
+        
+        for center in range(0, len(s)):
+            center_string = s[center]
+            center_max = 1
+            offset = 1
+            while center - offset >= 0 and center + offset <= len(s) - 1:
+                if s[center - offset] == s[center + offset]:
+                    center_max = center_max + 2
+                    center_string = s[center - offset:center + offset + 1]
+                    offset = offset + 1
+
+                else:
+                    break
+                
+            if center_max >= max:
+                max = center_max
+                result_string = center_string
+
+        for even_left in range(0, len(s)):
+            offset = 0
+            center_max = 0
+            center_string = ""
+            
+            while even_left - offset >= 0 and even_left + offset + 1 <= len(s) - 1:
+                    if s[even_left - offset] == s[even_left + offset + 1]:
+                        center_max = center_max + 2
+                        center_string = s[even_left - offset : even_left + offset + 2]
+                     
+                        offset = offset + 1
+                    else:
+                        break
+
+            if center_max >= max:
+
+                max = center_max         
+                result_string = center_string
+                    
+        return result_string
+
+
+                    
+if __name__ == "__main__":
+
+    mystr = 'abba'
+    
+    solution = Solution()
+    print     solution.longestPalindrome(mystr)

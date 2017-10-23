@@ -1,0 +1,64 @@
+##! not completely solved
+# besaerch: n2logn
+
+# hashmap, python dict, 
+# return duplicate
+
+def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        so = nums
+        d = {}
+        for i in range(0, len(nums)):
+            if nums[i] not in d or i > d[nums[i]]:
+#                d[nums[i]] = dict()
+                d[nums[i]] = i
+            else:
+
+                continue
+#                d[nums[i]] [i] = 'Y'
+                
+        target = 0
+
+
+        i = 0
+        j = 0
+        relist = []
+        
+        for i in range(0, len(nums)):
+            for j in range(i+1, len(nums)):
+                t = target - so[i] - so[j]
+                if t in d.keys():
+                    positionfind = d[t]
+                else:
+                    continue
+                
+                if positionfind > i and positionfind > j :
+                    relist.append( [so[x] for x in [i, j, positionfind]] )
+                else:
+                    continue
+
+                
+        return relist
+
+
+#! can be used, is not the optimal soluiton 
+def b_search(so, start, end, ele):
+    if start > end:
+        return -1
+    else:
+        p = (start+end)/2
+        pilot = so[p]
+        if ele > pilot:
+            return b_search(so, p+1, end, ele)
+        elif ele < pilot:
+            return b_search(so, start, p-1, ele)
+        else:
+            return p
+
+if __name__ == "__main__":
+    so = sorted([-1,0,1,2,-1,-4])
+#    print so
+    print b_search(so, 0, 5, 2)

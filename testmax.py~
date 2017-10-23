@@ -1,0 +1,4 @@
+from max_XOR import makelength
+
+if __name__ == "__main__":
+    (a,b) = makelength("11", "1111")

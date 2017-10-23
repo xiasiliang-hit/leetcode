@@ -1,0 +1,17 @@
+import pdb
+
+
+class Solution:
+    def __init__(self):
+        return
+
+    def cal(self, 2darray, X, Y):
+        for i in range(0, X):
+            for j in range(0, Y):
+                check_neighbour(self, 2darray, X, Y, i, j)
+
+    def check_neighbour(self, 2darray, X, Y):
+        count = 0
+        if 2darray[]:
+            
+        

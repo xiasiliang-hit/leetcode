@@ -1,0 +1,17 @@
+class elevator(object):
+    def __init__ (self, n_floor):
+        self.n_floor = n_floor
+        self.state = "STOP" # UP, DOWN, STOP
+        self.floor_array = [None * n_floor]
+        return
+
+    
+
+    
+    def moveUp():
+        return
+        
+    def moveDown():
+        return
+
+    

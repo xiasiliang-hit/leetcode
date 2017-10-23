@@ -1,0 +1,33 @@
+import pdb
+
+def construct_tree(line):
+    if check() == False:
+        return
+    else:
+        pairs = line.split(' ')
+        d = {}
+
+        parents = []
+        children = []
+        
+        #construct dict
+        for p in pairs:
+            parent = p[1]
+            child = p[3]
+
+            parents.append[parent]
+            children.append[child]
+            
+            if parent is in d.keys():
+                d[parent].append(child)
+            else:
+                d[parent] = [child]
+
+        for ele in d:
+            
+        
+
+
+
+def check():
+    return True

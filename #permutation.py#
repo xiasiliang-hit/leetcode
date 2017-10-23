@@ -94,6 +94,6 @@ if __name__ == '__main__':
 
     l = permutation2('abc')
     print l
-    print "aaaa".count("aaa")
+
 #    print ix
 #    permutations("")

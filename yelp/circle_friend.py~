@@ -1,0 +1,25 @@
+import pdb
+
+
+
+# input [(1,2) (2,3) (1,3)]
+def friend_circle(li, given_num):
+    di = {}
+    for pair in li:
+        if pair[0] in di.keys():
+            di[pair[0]].append(pair[1])
+        else:
+            di[pair[0]] = [pair[1]]
+
+
+    q = queue()
+    q.put(given_num)
+
+    re = []
+    while (len(q) != 0):
+
+        for ele in q.pop():
+            for fri in di[ele]:
+                q.append(fri)
+
+                re.append[fri]

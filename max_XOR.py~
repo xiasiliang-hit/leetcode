@@ -1,0 +1,16 @@
+import pdb
+
+class Solution(object):
+    def max_XOR(self, array):
+        
+
+
+
+
+    def get_comb(array):
+        re = []
+        for e1 in array:
+            for i in range(array.index(e1), len(array)):
+                re.append([e1,e2])
+
+        return re

@@ -1,0 +1,46 @@
+import pdb
+import Queue
+
+
+class Solution(object):
+    #visited = []
+    #nComponent = True
+    #matrix = None
+
+    def __init__ (self, matrix):
+        self.matrix = matrix
+        self.visited = [False]*len(matrix)
+        self.nComponent = 0
+
+        
+    def solution (self):
+        i = 0
+        while i <= len(self.matrix) and self.visited[i] == False:
+            self.visited[i] = True
+            self.expend(i)
+            i = i + 1
+
+        return nComponent
+        
+    def expend(self, node):
+        q = Queue.Queue()
+        q.put(node)
+        
+        while q.empty() != True:
+            i = q.get()
+            for j in range(len(self.matrix)):
+                if self.matrix[i][j] == 1 and self.visited[j] == False:
+                    print q
+                    q.put(j)
+                    self.visited[j] == True
+
+        nComponent = nComponent + 1
+        return 
+    
+                
+if __name__ == "__main__":
+    m = [[0,1,1], [1,0,1], [1,1,0]]
+    s = Solution(m)
+    s.solution()
+
+

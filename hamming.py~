@@ -1,0 +1,21 @@
+import pdb
+
+class Hammming(object):
+    def gethamming (self, a, b):
+        abin = "0:b".format(a, 2)
+        bbin = "0:b".format(b, 2)
+
+        if (len(abin) > len(bbin)):
+            dis = len(abin) - len(bbin)
+            bbin = '0'*dis  + bbin
+        else:
+            dis = len(bbin) - len(abin)
+            abin = '0'*dis + abin
+
+
+        hamming = 0
+        for i in range(0, max(len(abin, bbin))-1):
+            if abin[i] != bbin[i]:
+                hamming = hamming + 1
+
+        

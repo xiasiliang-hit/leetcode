@@ -1,0 +1,24 @@
+import pdb
+import headq
+
+def get_median(array): # assume len is greater than
+    small = array[0] < array[1] ? array[0] : array[1]
+    big = array[0] < array[1] ? array[1] : array[0]
+    
+    median = (small + big ) /2.0
+    print array[0], median 
+
+    headleft = []
+    headright = []
+
+    headppush(headright, big)
+    headppush(headleft, small) 
+    
+    for e in array[2:]:
+        if e > median:
+            headppush(headright, median)
+            if len(headleft) == len(right):
+                median = (headleft[0] + headright[0])/2
+
+            elif len(headleft) > len(headright)
+                

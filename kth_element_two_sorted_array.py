@@ -1,0 +1,19 @@
+import pdb
+
+class Solution(object):
+    def kth_ele(self, arr1, arr2, k):
+        i = 0
+        j = 0
+        count = 1
+        while (i <= len(arr1) - 1 and j <= len(arr2) - 1):
+            if count = k:
+                return 
+            
+            if arr1[i] <= arr2[j]:
+                i = i+ 1
+            else:
+                j = j+1
+
+            count = count + 1
+
+        

@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+from sklearn import datasets
+
+samples = datasets.load_iris()
+
+print(samples.data.shape)
+print(samples.target)
+
+

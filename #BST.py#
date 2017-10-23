@@ -41,6 +41,11 @@ class TreeNode(object):
                  current = current.right
          return path
 
+    def insert(node):
+         if node.val > self.val:
+              if node.val 
+
+    
      
      
 class BST(object):

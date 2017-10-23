@@ -84,38 +84,47 @@ class BST(object):
 
     def print_tree(self):
         print self.mid_order()
+
+
+# convert to a double linked list
+def convert(root):
+    if (root.left is None and root.right is None):
+        return (None, None)
+    elif root.left is not None:
+        (head,tail) = convert(root.left)
+        tail.right = root
+        return (head, tail)
+
+    elif root.right is not None:
+        (head, tail) = convert(root.right)
+        head.left = root
+        return (head, tail)
+
+
+
+    
         
+
+
+# connect head and tail so that it is circular 
+def connect(root):
+    current = root
+    while (current.left is not None):
+        current = current.left
+    head = current
+    
+    current = root
+    while (current.right is not None):
+        current = current.right
+
+    tail = current
+    head.left = tail
+    tail.right = left
+    
+    return head
+
             
 if __name__ == '__main__':
-
-#    print TreeNode(1)
-    root = TreeNode(4)
-#    root.val = 4
-
-    node2 = TreeNode(2)
-#    node2.val = 2
-
-    node5 = TreeNode(5)
-#    node5.val = 5
-
-    node1 = TreeNode(1)
-#   node1.val = 1
+    tree = BST([1,2,3,4,5,6])
     
-    node3 = TreeNode(3)
-#    node3.val = 3
-
-    root.left = node2
-    root.right = node5
-
-    node2.left = node1
-    node2.right = node3
-
-    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    arr1 = math.shuffle()
     
-    tree = BST(arr)
-    tree.print_tree()
-    #pdb.set_trace()
-#    tree.print_tree()
-     
-    #    print TreeNode.binary_search(root, 4)

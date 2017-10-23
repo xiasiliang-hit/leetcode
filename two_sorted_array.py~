@@ -1,0 +1,67 @@
+import pdb
+
+
+
+# assume a1 and a2 are sorted
+def merge_sort(a1, a2):
+        i = 0
+        j = 0
+        re = [None] * (len[a1] + len[a2])
+        index_re = 0
+        while i < len(a1):
+            while j < len(a2):
+
+                if a1[i] < a2[j]:
+                    re[index_re] = a1[i]
+                    i = i + 1
+                    index_re = index_re + 1
+                else:
+                    re[index_re] = a2[i]
+                    j = j + 1
+                    index_re = index_re + 1
+                    
+                return re
+
+def media1(a1, a2):
+        re = merge_sort(a1, a2)
+        # return based on odd or even
+
+#solution O(log(m+n) )
+def media2(a1, a2):
+        length = len(a1) + len(a2)
+        arr = a1 + a2
+        result = None
+        #odd
+        if length % 2 == 1:
+            k = (length + 1) / 2 - 1 
+            result = kth_ele(arr, k)
+        else:
+            k1 = length/2
+            k2 = length/2 + 1
+            result = (kth_ele(arr, k1) + kth_ele(arr, k2)) / 2.0
+
+        return result
+    
+def kth_ele(array, k):
+        pilot = array[0]
+        left = []
+        right = []
+        for ele in array:
+            if ele <= pilot:
+                left.append(ele)
+            else:
+                right.append(ele)
+
+        if len(left) == k:
+            return pilot
+        elif len(left) > k:
+            return kth_ele(left, k)
+        else:
+            return kth_ele(right, k-len(left))
+            
+    
+if __name__ == "__main__":
+    a1 = [1,2,100]
+    a2 = [4,5,6]
+    
+    print media2(a1, a2)       

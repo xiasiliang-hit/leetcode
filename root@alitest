@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<script>
+        //声明_czc对象:
+        var _czc = _czc || [];
+        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+        _czc.push(["_setAccount", "1259101635"]);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="扁鹊兄弟互助,扁鹊兄弟,网络互助平台,兄弟互助,互助平台,网络互助,网络保障平台,网络保障" />
+<meta name="description" content="扁鹊兄弟互助平台,更低互助金,更高更公平的可信赖的保障" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+<meta name="baidu-site-verification" content="rl2LXkR5gu" />
+<meta name="sogou_site_verification" content="IFMGfZflnQ"/>
+<meta name="360-site-verification" content="fd4c3d7254909b7d6aedcfd5eea85ff7" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title>提现进度</title>
+<link rel="stylesheet" href="css/top-up.css">
+<link rel="stylesheet" href="css/common.css">
+<script>
+        !function () {
+            function a() {
+                if(document.documentElement.clientWidth<=640){
+                    document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + "px"
+                }
+
+            }
+
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b);
+                b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);
+</script>
+</head>
+
+<body>
+<div class="all-box">
+    <h5>中国工商银行</h5>
+    <h2>135,000.00</h2>
+    <h6>处理中</h6>
+    <div class="out clearfix">
+    	<h6>转出说明</h6>
+        <span>余额提现</span>
+    </div>
+    <div class="middle-box clearfix">
+    	<div class="box1 clearfix">
+            <h6>处理进度</h6>
+            <h5><img src="images/ev1@2x.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;付款成功</h5>
+            <h4>10-18 22：00</h4>
+        </div>
+    	<div class="box2 clearfix">
+            <h6>&nbsp;&nbsp;&nbsp;&nbsp;</h6>
+            <h5><img src="images/ev2@2x.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;银行处理中</h5>
+            <h4>10-18 22：00</h4>
+        </div>
+    	<div class="box3 clearfix">
+            <h6>&nbsp;&nbsp;&nbsp;&nbsp;</h6>
+            <h5><img src="images/ev3@2x.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到账成功</h5>
+            <h4>预计10-13 23：59前</h4>
+        </div>
+    </div>
+    <div class="out clearfix" style="border-bottom:1px solid #e1e1e1;">
+    	<h6>转入账户</h6>
+        <h5>中国工商银行(1234)</h5>
+    </div>
+    <div class="out clearfix">
+    	<h6>创建时间</h6>
+        <h5>2016-10-10 22：00 <img src="images/arrow-R@2x.jpg" alt=""></h5>
+    </div>
+</div>
+
+</body>
+</html>
