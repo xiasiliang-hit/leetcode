@@ -1,0 +1,41 @@
+
+class Solution(object):
+    def letterCombinations(self, digits):
+        print self.combine_set([], 'abc')
+        m = {u'2':'abc', u'3':'def', u'4':'ghi', u'5':'jkl',u'6':'mno', u'7':'pqrs', u'8':'tuv', u'9':'wxyz'}
+        
+        l = []
+        for i in range(0, len(digits)):
+            characters = m[digits[i]]
+            l.append(characters)
+
+        combined = []
+        for i in range(0, len(l)):
+            ele = l[i]
+            combined = self.combine_set(combined, ele)
+        
+        return combined
+
+    def combine(self, xstr, ystr):
+        re = []
+        for ch1 in xstr:
+            for ch2 in ystr:
+                re.appedn(ch1+ch2) 
+        return xstr
+    
+    def combine_set(self, xlist, ystr):
+        if len(xlist) == 0:
+            l = [ ele for ele in ystr]
+        
+        l = []
+        for astr in xlist:
+            l.append(self.conbine(xstr, ystr) )
+
+        
+        return l
+
+
+if __name__ == '__main__':
+
+    s = Solution()
+    s.letterCombinations('123')

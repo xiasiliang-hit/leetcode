@@ -1,0 +1,31 @@
+# passed
+
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        m = {')':'(', '}':'{', ']':'['}
+        a = []
+        f = True
+        for i in s:
+            try:
+                if i in '({[':
+                    a.append(i)
+                elif i in ')}]':
+                    if m[i] == a.pop():
+                     continue
+                    else:
+                        f = False
+                        break
+                else:
+                    continue
+
+            except IndexError, KeyError:
+                f =False
+                break
+                
+        if len(a) != 0:
+            f = False
+        return f

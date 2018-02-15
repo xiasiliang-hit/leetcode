@@ -64,12 +64,13 @@ def permutation2(mystr):
 #    ix = ix+1
 
     if len(mystr) <= 1:
-        return [mystr]
+        return mystr
     
     res = []
     for ele in mystr:
         permutations = permutation2(mystr.replace(ele, ""))
         for permutation in permutations:
+
             res.append(ele + permutation)        
     return res
 
@@ -87,13 +88,18 @@ def permutation3(mystr):
             for p in permutation3(rest):
                 res.append(p[0:i]+ str(c)+ p[i:])
         
-        return res
-        
+            return res
+
+
+    
+    
 if __name__ == '__main__':
 #    ix = 0
 
-    l = permutation2('abc')
-    print l
-    print "aaaa".count("aaa")
+    print permutation2('abcd'):
+
+    
+
+
 #    print ix
 #    permutations("")

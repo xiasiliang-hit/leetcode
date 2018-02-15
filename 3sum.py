@@ -62,7 +62,30 @@ def b_search(so, start, end, ele):
         else:
             return p
 
+def sum3_hash_version(array, target):
+        d = {}
+
+        for i in range(0, len(array)):
+                d[array[i]]= i
+
+        for j in range(0, len(array)):
+                for k in range(j+1, len(array)):
+                        rest = target- array[j] - array[k]
+                        if rest in d.keys() and rest > k:
+                                return [j, k, d[rest]]
+                        else:
+                                continue
+
+        return None
+        
+    
 if __name__ == "__main__":
     so = sorted([-1,0,1,2,-1,-4])
 #    print so
     print b_search(so, 0, 5, 2)
+
+    array=[1,2,3,4]
+    target=6
+    print    sum3_hash_version(array, target)
+
+    

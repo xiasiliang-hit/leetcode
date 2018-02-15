@@ -20,7 +20,7 @@ def get_median(array): # assume len is greater than
             headppush(headright, median)
 
             if len(headL) == len(headright):
-                median = (headL[0] + headright[0])/2
+                median = (headL[-1] + headright[0])/2
                 print median,
 
             elif len(headL) + 1 = len(headright):
@@ -29,7 +29,7 @@ def get_median(array): # assume len is greater than
 
             elif len(headL) + 2 = len(headright):
                 balance(headright, headL)
-                median = (headL[0] + headright[0])/2
+                median = (headL[-1] + headright[0])/2
                 print median
 
             else:
@@ -49,7 +49,8 @@ def balance(a, b):
 if __name__ == "__main__":
     a= [2,1,3,4,5,6]
     get_median()                
-                
 
+    heapq.heapify(a)
+    print a
 
 

@@ -1,0 +1,23 @@
+import pdb
+
+
+
+class Solution(object):
+    def removeElement(self, nums, val):
+                    """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+                    for i in range(len(nums)):
+                        ele = nums[i]
+                        if ele == val:
+                            del nums[i]
+                        else:
+                            continue
+        
+        
+
+if __name__ == "__main__":
+
+    Solution.removeElement(self, nums, val)

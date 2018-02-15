@@ -1,0 +1,5 @@
+import sys
+lines = sys.stdin.input()
+
+for line in lines:
+    print line
