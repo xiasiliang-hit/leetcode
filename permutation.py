@@ -77,7 +77,6 @@ def permutation2(mystr):
 def permutation3(mystr):
 #    global ix
 #    ix = ix + 1
-    
     if len(mystr) == 1:
         return [mystr]
     else:

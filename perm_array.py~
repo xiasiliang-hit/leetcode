@@ -1,0 +1,27 @@
+#permutaion  arrays 
+def permute(nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if len(nums) <= 1:
+            return [nums]
+        
+        first = nums[0]
+        last = self.permute(nums[1:])
+        re = []
+        for ele in last:
+            for i in range(0, len(ele)+1):
+                if i == 0:
+                    head = []
+                else:
+                    head = last[0:i]
+#                print head
+
+                head.append(first)
+                head.extend( ele[i:] )
+
+                re.append(head)
+                print re
+        return re
+            

@@ -1,0 +1,37 @@
+class Solution(object):
+    
+    def __init__(self):
+        
+        self.back = []
+        self.re = []
+    
+    def combinationSum(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+
+        
+        candidates = sorted(candidates)
+        self.back = [(target, [])]
+        
+        while len(self.back) != 0:
+            ele = self.back.pop()
+            target = ele[0]
+            array = ele[1]
+            
+            self.backtrace(candidates, target, array)
+                                
+        return re
+    
+    def backtrace(self, candidates, target, array):
+        aa = list(array)
+        for ele in candidates:
+            if target - ele > 0:
+                self.back.append((target-ele, aa.append(ele)))
+            elif target - ele == 0:
+                self.re.append( aa.append(ele) )
+            else:
+                continue
+            

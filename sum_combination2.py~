@@ -1,0 +1,36 @@
+back = []
+re = []
+def combinationSum(candidates, target, part_solution_arr):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        candidates = sorted(candidates)
+        while len(back) != 0:
+            ele = back.pop()
+            t = ele[0]
+            a = ele[1]
+            print t, a
+            for ele in candidates:
+                if target - ele > 0:
+                    aa.append(ele)
+                    back.append((target-ele, aa))
+
+                elif target - ele == 0:
+                    aa.append(ele)
+                    re.append( aa )
+                else:
+                    continue
+
+                backtrace(candidates, t, a)
+        return re
+
+
+if __name__ == "__main__":
+    candidates = [10, 1, 2, 7, 6, 1, 5]
+    target = 8
+    array = []
+    
+    coonbinationSum(candidates, target, array)
+            

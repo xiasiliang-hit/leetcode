@@ -1,0 +1,36 @@
+import pdb
+
+
+l(s, n) = l(n-1)+s(n), if s(n) > l(n-1)
+or l(n-1) if s(n) <= l(n - 1)
+
+# s is string
+# n is postion index
+temp = []
+def LIS(s, n):
+    last = temp[n-1] #LIS(s[:-1], n-1)
+    if s[n] > last:
+        return last + s[n]
+    else:
+        return last
+
+temp = []
+def construct(s, n):
+    # init
+    if s[0] < s[1]:
+        temp.append(s[0]).append(s[0:2])
+    else:
+        temp.append(s[0]).append(s[1])
+
+    
+    for i in range(2, len(s)):
+        temp.append(  LIS(s, i) )
+
+    return temp[-1]
+if __name__ == "__main__":
+    s = "123456"
+    print construct(s, len(s) -1)
+    
+    
+
+

@@ -1,0 +1,17 @@
+import pdb
+
+def increase_decrease(array, head, end):
+    i = (head+end) / 2
+    if i == head:
+        
+    if i-1>=0 and i+1 < len(array):
+        if array[i-1] <=array[i]  and array[i] <= array[i+1]:
+            return increase_decrease(array, i+1, end)
+        elif array[i-1] <= array[i] and array[i] >= array[i+1]:
+            return array[i]
+        else: #array[i-1] >= array[i] and array[i] >= array[i+1]:
+            return increase_decrease(array, head, i)
+
+    else:
+        
+            

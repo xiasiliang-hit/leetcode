@@ -17,9 +17,9 @@ def kth_element(narray, k):
         else:
             continue
     
-    if (len(left) > k - 1):
-        return kth_element(left, k)
-    elif (len(left) < k - 1):
+    if (len(left) > k-1):
+        return kth_element(left, k-1)
+    elif (len(left) < k-1):
         return kth_element(right, k-len(left)-1)
     else:
         return target 
