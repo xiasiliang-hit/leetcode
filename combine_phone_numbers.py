@@ -54,7 +54,7 @@ class SolutionMapReduce(object):
 
 
     def begin2(self, digits):
-        l = map(self.digitmap, digits)
+        l = map(self.digit_map, digits)
         r = reduce(self.multi_map, l)
         for ele in r:
             print r
