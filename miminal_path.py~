@@ -1,0 +1,21 @@
+def minimal_path(grid):
+    d = {}
+    X = len(grid[0])
+    Y = len(grid)
+    i = 0
+    j = 0
+    d[(0,0)] = grid[0][0]
+    d[(0,1)] = grid[0][0] + grid[0][1]
+    d[(1,0)] = grid[0][0] + grid[1][0]
+    
+    
+    while j < Y and i < X:
+        i += 1
+        d[(i,j)] = d[(i-1, j)] + grid[j][i]
+
+
+def min(x, y):
+    if x < y:
+        return x
+    else:
+        return y

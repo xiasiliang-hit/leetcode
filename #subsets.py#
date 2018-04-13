@@ -1,0 +1,30 @@
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if nums == [0]:
+            return [[], [0]]
+        
+        ini = [[0], [1]]
+        for i in range(len(nums)-1):
+            ini = self.mult(ini)        
+
+        re = []
+        for ele in ini:
+            bitvector = []
+            for i in range(len(ele)):
+                if  ele[i] == 1:
+                
+                    bitvector.append( (nums[i]) )
+            re.append(bitvector)
+
+        return re
+                
+    def mult(self, array):
+        re = []
+        for ele in array:
+            re.append(ele + [0])
+            re.append(ele+ [1])
+        return re

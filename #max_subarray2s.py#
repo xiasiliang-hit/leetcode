@@ -1,0 +1,24 @@
+# course solution
+class Solution(object):
+    def maxSubArray(self, array):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        i = 0
+        max = -sys.maxint
+        end = 0
+        while i < len(array):
+            
+            if max < array[i]:
+                max = array[i]
+                end = i
+
+            i+=1
+
+        j = 0
+        while j < len(array):
+            
+
+            
+        return maxi

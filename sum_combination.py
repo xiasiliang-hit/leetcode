@@ -15,11 +15,11 @@ def combinationSum(candidates, target):
         global back
         global re
         candidates = sorted(candidates)
-        back = [(target, [], 0)]
+        back = [(target, [], 0)]  # target, esiting elements, position
 
         while len(back) != 0:
             ele = back.pop()
-            t = ele[0]
+            t = ele[0] 
             a = ele[1]
             p = ele[2]
 

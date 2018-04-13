@@ -1,0 +1,25 @@
+class Solution(object):
+    def numDecodings(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        m = {}
+        
+        i = 2
+        d = {}
+        d[0] = [mm(int(s[0]))]
+        d[1] = d[0][0] + [mm(int(s[0]))
+        while i < len(s):
+            d[i] = []
+            for ele in d[i-1]:
+                d[i].append( ele + mm(int(s[i])) )
+            inte = int(s[i-1 : i+1])
+            if (inte >= 64 and inte <= 64 +26):
+                for ele in d[i-2]:
+                    d[i].append( ele + mm(inte))
+
+
+    def mm(inte):
+        
+        return str(unichr(64 + inte) )

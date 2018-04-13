@@ -1,0 +1,23 @@
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        
+        
+        ini = [[0], [1]]
+        #for i in range(len(nums)):
+        ini = map(self.mult, ini)        
+
+        print ini
+        
+                
+    def mult(self,array):
+
+        return [array.append(0), array.append(1)  ]
+
+
+if __name__ == '__main__':
+    s = Solution()
+    s.substes()

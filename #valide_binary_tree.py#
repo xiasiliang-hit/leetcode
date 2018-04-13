@@ -1,0 +1,114 @@
+# works
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def __init__(self):
+        self.in_order=[]
+    
+    def isValidBST(self, tree):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if tree == None:
+            print "in"
+            return True 
+        if tree.left == None and tree.right == None:
+            return True
+        
+        
+        
+        self.in_order_tree(tree)
+        return self.valid()
+
+    def in_order_tree(self, tree ):
+        if tree == None:
+            return
+
+        self.in_order_tree(tree.left)
+        self.in_order.append(tree.val)
+        self.in_order_tree(tree.right)
+
+    def valid(self):
+        print "in wrong"
+        flag = True
+        for i in range(len(self.in_order) - 1):
+            if self.in_order[i] >= self.in_order[i+1]:
+                flag = False
+                break
+            else:
+                continue
+        return flag 
+
+        # some case not work
+# [-1, 0]
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+in_order = []
+class Solution(object):
+    def isValidBST(self, tree):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if tree == None:
+            print "in"
+            return True 
+        if tree.left == None and tree.right == None:
+            return True
+        
+        
+        
+        self.in_order_tree(tree)
+        return self.valid()
+
+    def in_order_tree(self, tree ):
+        if tree == None:
+            return
+
+        self.in_order_tree(tree.left)
+        in_order.append(tree.val)
+        self.in_order_tree(tree.right)
+
+    def valid(self):
+        print "in wrong"
+        flag = True
+        for i in range(len(in_order) - 1):
+            if in_order[i] > in_order[i+1]:
+                flag = False
+                break
+            else:
+                continue
+        return flag 
+
+        in_order = []
+def validate_binary_tree(tree):
+    if tree == None:
+        return
+    
+    visit(tree.left)
+    in_order.append(tree.value)
+    visit(tree.right)
+
+
+def valid()
+    flag = True
+    for i in range(len(in_order) - 1):
+        if in_order[i] > in_order[i+1]:
+            flag = False
+        else:
+            continue
+    return flag 
+
+        

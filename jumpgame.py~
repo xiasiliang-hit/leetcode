@@ -1,0 +1,10 @@
+def jump(nums):
+    que = [(0, nums[0])]
+    while que != None:
+        (in, step) = que.pop()
+        for i in range(1, step):
+            que.append((in+i, step))
+
+        
+
+        
