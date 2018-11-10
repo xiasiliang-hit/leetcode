@@ -1,5 +1,5 @@
 #stock price
-
+# do not work 
 import sys
 
 
@@ -50,8 +50,27 @@ def max_subarray(array):
         if m[j] < mini:
             mini = m[j]
             start = j        
-    
-    return array[start+1 : end+1]
+
+    margin = 0
+    if start >= end:
+        end2 = start
+        maxi2 = -sys.maxint
+        
+        for k in range (start, len(array)-1):
+            if maxi2 < m[k]:
+                maxi2 = m[k]
+                end2 = k
+
+        if start == end2:
+            margin = 0
+        else:
+            margin =  m[end2] - m[start]
+        
+    if margin > m[end]:
+        return margin
+    else:
+        return m[end]
+#    return array[start+1 : end+1]
         
 
 

@@ -58,7 +58,7 @@ def permutations(string, step = 0):
 
 
 #my version
-
+# wrong, "aab" always replace first "a"
 def permutation2(mystr):
 #    global ix
 #    ix = ix+1
